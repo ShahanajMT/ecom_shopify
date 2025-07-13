@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:tstore/common/styles/spacing_styles.dart';
-import 'package:tstore/common/widgets/tFormDivider.dart';
+import 'package:tstore/common/widgets/login_signup/tFormDivider.dart';
 import 'package:tstore/features/authentication/screens/login/widgets/tLoginForm.dart';
 import 'package:tstore/features/authentication/screens/login/widgets/tLoginHeader.dart';
-import 'package:tstore/common/widgets/tSocialMediaButtons.dart';
+import 'package:tstore/common/widgets/login_signup/tSocialMediaButtons.dart';
 
 import 'package:tstore/utils/constants/sizes.dart';
 

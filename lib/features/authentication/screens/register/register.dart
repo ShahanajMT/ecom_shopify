@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:tstore/common/widgets/tFormDivider.dart';
-import 'package:tstore/common/widgets/tSocialMediaButtons.dart';
+import 'package:tstore/common/widgets/login_signup/tFormDivider.dart';
+import 'package:tstore/common/widgets/login_signup/tSocialMediaButtons.dart';
 
 import 'package:tstore/utils/constants/sizes.dart';
 import 'package:tstore/utils/constants/text_string.dart';
-
 
 import 'widget/tSignupform.dart';
 
@@ -14,7 +13,6 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
@@ -41,4 +39,3 @@ class SignUpScreen extends StatelessWidget {
     );
   }
 }
-

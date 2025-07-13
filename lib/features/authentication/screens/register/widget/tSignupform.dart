@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/utils.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tstore/features/authentication/screens/register/verify_email.dart';
 import 'package:tstore/utils/constants/colors.dart';
 import 'package:tstore/utils/constants/sizes.dart';
 import 'package:tstore/utils/constants/text_string.dart';
@@ -146,7 +149,7 @@ class TSignUpForm extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(
                     vertical: TSizes.buttonHeight),
               ),
-              onPressed: () {},
+              onPressed: () => Get.to(const VerifyEmailScreen()),
               child: const Text(TTexts.createAccount),
             ),
           ),
