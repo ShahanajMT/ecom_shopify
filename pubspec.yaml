@@ -169,7 +169,6 @@ dev_dependencies:
 
   flutter_test:
     sdk: flutter
-
 native_splash:
   color: "#FFFFFF"
   color_dark: "#272727"

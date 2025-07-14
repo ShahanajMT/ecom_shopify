@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/utils.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tstore/features/authentication/screens/register/verify_email.dart';
 import 'package:tstore/utils/constants/colors.dart';

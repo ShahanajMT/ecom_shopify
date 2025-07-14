@@ -3,8 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:tstore/common/styles/spacing_styles.dart';
 import 'package:tstore/features/authentication/screens/login/login.dart';
-import 'package:tstore/features/authentication/screens/register/verify_email.dart';
-import 'package:tstore/utils/constants/image_string.dart';
+
 import 'package:tstore/utils/constants/sizes.dart';
 import 'package:tstore/utils/constants/text_string.dart';
 import 'package:tstore/utils/helpers/helper_fn.dart';
@@ -52,7 +51,7 @@ class SuccessScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         vertical: TSizes.buttonHeight),
                   ),
-                  onPressed: () => Get.to(const LoginScreen()),
+                  onPressed: onPressed,
                   child: const Text(TTexts.tContinue),
                 ),
               ),

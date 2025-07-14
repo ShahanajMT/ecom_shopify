@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/extension_navigation.dart';
-import 'package:get/utils.dart';
-import 'package:tstore/common/widgets/success_screen/success_screen.dart';
-import 'package:tstore/features/authentication/screens/login/login.dart';
+import 'package:get/route_manager.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:tstore/common/styles/spacing_styles.dart';
 import 'package:tstore/utils/constants/image_string.dart';
 import 'package:tstore/utils/constants/sizes.dart';
 import 'package:tstore/utils/constants/text_string.dart';
 import 'package:tstore/utils/helpers/helper_fn.dart';
 
-class VerifyEmailScreen extends StatelessWidget {
-  const VerifyEmailScreen({super.key});
+class ResetPasswordScreen extends StatelessWidget {
+  const ResetPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,32 +16,26 @@ class VerifyEmailScreen extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
-          IconButton(
-              onPressed: () => Get.offAll(() => const LoginScreen()),
-              icon: const Icon(Icons.close_outlined))
+          IconButton(onPressed: () => Get.back(), icon: const Icon(Iconsax.close_circle))
         ],
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(TSizes.defaultSpace),
+      body:  Padding(
+          padding: TSpacingStyles.paddingWithAppBarHeight,
           child: Column(
             children: [
               // Image
               Image(
-                  image: const AssetImage(TImages.staticSuccessIllustrtion1),
+                  image: const  AssetImage(TImages.onBoardingImage2),
                   width: THelperFunction.screenWidth() * 0.6),
               const SizedBox(height: TSizes.spaceBwSections),
 
               // Title & Subtitle
-              Text(TTexts.confirmEmail,
+              Text(TTexts.changePasswordTitle,
                   style: Theme.of(context).textTheme.headlineMedium,
                   textAlign: TextAlign.center),
               const SizedBox(height: TSizes.spaceBwItems),
-              Text('shanu@gmail.com',
-                  style: Theme.of(context).textTheme.labelLarge,
-                  textAlign: TextAlign.center),
-              const SizedBox(height: TSizes.spaceBwItems),
-              Text(TTexts.confirmEmailSubTitle,
+
+              Text(TTexts.changePasswordSubTitle,
                   style: Theme.of(context).textTheme.labelMedium,
                   textAlign: TextAlign.center),
               const SizedBox(height: TSizes.spaceBwItems),
@@ -59,15 +52,8 @@ class VerifyEmailScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         vertical: TSizes.buttonHeight),
                   ),
-                  onPressed: () => Get.to(() =>
-                    SuccessScreen(
-                      image: TImages.staticSuccessIllustrtion1,
-                      title: TTexts.yourAccountCreatedTitle,
-                      subtitle: TTexts.yourAccountCreatedSubTitle,
-                      onPressed: () => Get.to(() => const LoginScreen()),
-                    ),
-                  ),
-                  child: const Text(TTexts.tContinue),
+                  onPressed: () {},
+                  child: const Text(TTexts.done),
                 ),
               ),
               const SizedBox(height: TSizes.spaceBwItems),
@@ -81,7 +67,6 @@ class VerifyEmailScreen extends StatelessWidget {
             ],
           ),
         ),
-      ),
     );
   }
 }
