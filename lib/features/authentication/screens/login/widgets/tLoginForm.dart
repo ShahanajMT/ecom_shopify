@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tstore/features/authentication/screens/password/forget_password.dart';
 import 'package:tstore/features/authentication/screens/register/register.dart';
+import 'package:tstore/navigation_menu.dart';
 import 'package:tstore/utils/constants/sizes.dart';
 import 'package:tstore/utils/constants/text_string.dart';
 
@@ -15,8 +16,7 @@ class TLoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-            vertical: TSizes.spaceBwSections),
+        padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBwSections),
         child: Column(
           children: [
             // Email Field
@@ -64,13 +64,14 @@ class TLoginForm extends StatelessWidget {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
-                    borderRadius:
-                        BorderRadius.circular(TSizes.buttonRadius),
+                    borderRadius: BorderRadius.circular(TSizes.buttonRadius),
                   ),
-                  padding: const EdgeInsets.symmetric(
-                      vertical: TSizes.buttonHeight),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: TSizes.buttonHeight),
                 ),
-                onPressed: () {},
+                onPressed: () => Get.to(
+                  () => const NavigationMenu(),
+                ),
                 child: const Text(TTexts.signIn),
               ),
             ),
