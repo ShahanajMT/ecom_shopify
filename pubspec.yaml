@@ -139,7 +139,7 @@ environment:
 # ------- PACKAGES ------- #
 dependencies:
   cached_network_image: 
-  carousel_slider: ^4.2.1
+  carousel_slider: ^5.1.1
   cloud_firestore: null
   connectivity_plus: ^5.0.2
   cupertino_icons: ^1.0.2
