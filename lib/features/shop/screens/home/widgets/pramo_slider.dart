@@ -2,13 +2,12 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:tstore/common/widgets/custom_shapes/container/t_smooth_page_indicator_container.dart';
 
 import 'package:tstore/common/widgets/images/t_tounded_imaged.dart';
 import 'package:tstore/features/shop/controller/home_controller.dart';
-import 'package:tstore/features/shop/screens/home/home.dart';
 import 'package:tstore/utils/constants/colors.dart';
-import 'package:tstore/utils/constants/image_string.dart';
+
 import 'package:tstore/utils/constants/sizes.dart';
 
 class TPramoSlider extends StatelessWidget {
@@ -26,6 +25,7 @@ class TPramoSlider extends StatelessWidget {
       children: [
         CarouselSlider(
           options: CarouselOptions(
+            autoPlay: true,
             aspectRatio: 2,
             initialPage: 2,
             enlargeCenterPage: true,
@@ -40,12 +40,12 @@ class TPramoSlider extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               for (int i = 0; i < banners.length; i++)
-                 TCircularContainer(
+                 TSmoothPageIndicatorContainer(
                   backgroudColor: controller.carouselCurrentIndex.value == i ? TColors.primary : TColors.grey,
                   width: 20,
                   height: 4,
                   margin: const EdgeInsets.only(right: 10),
-                )
+                )    
             ],
           ),
         )

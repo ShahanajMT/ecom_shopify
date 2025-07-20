@@ -169,6 +169,7 @@ dev_dependencies:
 
   flutter_test:
     sdk: flutter
+  ecom_shopify: any
 native_splash:
   color: "#FFFFFF"
   color_dark: "#272727"
